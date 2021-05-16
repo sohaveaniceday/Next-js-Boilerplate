@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { TabPanels, TabPanel } from '@chakra-ui/react';
-
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 
@@ -14,17 +12,7 @@ const Index = () => (
       />
     )}
   >
-    <TabPanels>
-      <TabPanel>
-        <p>one!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>two!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>three!</p>
-      </TabPanel>
-    </TabPanels>
+    main
   </Main>
 );
 
