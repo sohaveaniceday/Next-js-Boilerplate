@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TabPanels, TabPanel } from '@chakra-ui/react';
+
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 
@@ -12,12 +14,17 @@ const Index = () => (
       />
     )}
   >
-    <p>
-      Check our GitHub project for more information about
-      {' '}
-      <a href="https://github.com/ixartz/Next-js-Boilerplate">Nextjs Boilerplate</a>
-      .
-    </p>
+    <TabPanels>
+      <TabPanel>
+        <p>one!</p>
+      </TabPanel>
+      <TabPanel>
+        <p>two!</p>
+      </TabPanel>
+      <TabPanel>
+        <p>three!</p>
+      </TabPanel>
+    </TabPanels>
   </Main>
 );
 
