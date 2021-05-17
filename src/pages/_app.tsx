@@ -5,7 +5,6 @@ import { AppProps } from 'next/app';
 
 import { NavBar } from '../components';
 
-// eslint-disable-next-line react/jsx-props-no-spreading
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ChakraProvider>
     <NavBar
@@ -14,6 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
         { label: 'Gallery', href: 'gallery' },
         { label: 'About', href: 'about' },
       ]}
+      logo={{ label: 'Waterside Barn', href: '/' }}
     />
     {/* eslint-disable-next-line react/jsx-props-no-spreading */}
     <Component {...pageProps} />

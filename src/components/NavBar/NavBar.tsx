@@ -35,7 +35,7 @@ const NavLink = ({ link }: { link: LinkType }) => (
   </Link>
 );
 
-export const NavBar = ({ links }: { links: LinkType[] }) => {
+export const NavBar = ({ links, logo }: { links: LinkType[]; logo: LinkType }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -49,7 +49,9 @@ export const NavBar = ({ links }: { links: LinkType[] }) => {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems="center">
-          <Box>Logo</Box>
+          <Box>
+            <NavLink link={logo} />
+          </Box>
         </HStack>
         <Flex alignItems="center">
           <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
