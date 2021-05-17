@@ -85,7 +85,7 @@ export const NavBar = ({ links, logo, children }: NavBarProps) => {
           </Box>
         ) : null}
       </Box>
-      <Box paddingTop={16} />
+      <Box style={{ paddingTop: isOpen ? `${48 * links.length + 64}px` : '64px' }} />
       {children}
     </>
   );
