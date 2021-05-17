@@ -85,7 +85,7 @@ export const NavBar = ({ links, logo, children }: NavBarProps) => {
           </Box>
         ) : null}
       </Box>
-      <Box paddingTop={4} />
+      <Box paddingTop={16} />
       {children}
     </>
   );
