@@ -61,7 +61,7 @@ export const NavBar = ({ links, logo, children }: NavBarProps) => {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems="center">
+          <HStack spacing={8} alignItems="center" paddingRight={{ base: 10, md: 0 }}>
             <Box>
               <NavLink link={logo} />
             </Box>
