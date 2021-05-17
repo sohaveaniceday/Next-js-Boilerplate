@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Hero } from '../components';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 
@@ -12,7 +13,7 @@ const Index = () => (
       />
     )}
   >
-    main
+    <Hero />
   </Main>
 );
 
