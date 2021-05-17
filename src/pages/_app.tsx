@@ -14,9 +14,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
         { label: 'About', href: 'about' },
       ]}
       logo={{ label: 'Waterside Barn', href: '/' }}
-    />
-    {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-    <Component {...pageProps} />
+    >
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+    </NavBar>
   </ChakraProvider>
 );
 export default MyApp;

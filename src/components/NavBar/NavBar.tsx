@@ -35,42 +35,58 @@ const NavLink = ({ link }: { link: LinkType }) => (
   </Link>
 );
 
-export const NavBar = ({ links, logo }: { links: LinkType[]; logo: LinkType }) => {
+export interface NavBarProps {
+  links: LinkType[];
+  logo: LinkType;
+  children: React.ReactNode;
+}
+
+export const NavBar = ({ links, logo, children }: NavBarProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-      <Flex h={16} alignItems="center" justifyContent="space-between">
-        <IconButton
-          size="md"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          aria-label="Open Menu"
-          display={{ md: 'none' }}
-          onClick={isOpen ? onClose : onOpen}
-        />
-        <HStack spacing={8} alignItems="center">
-          <Box>
-            <NavLink link={logo} />
-          </Box>
-        </HStack>
-        <Flex alignItems="center">
-          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
-            {links.map((link) => (
-              <NavLink key={link.href} link={link} />
-            ))}
+    <>
+      <Box
+        bg={useColorModeValue('gray.100', 'gray.900')}
+        px={4}
+        position="fixed"
+        width="100%"
+        zIndex={1}
+      >
+        <Flex h={16} alignItems="center" justifyContent="space-between">
+          <IconButton
+            size="md"
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label="Open Menu"
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems="center">
+            <Box>
+              <NavLink link={logo} />
+            </Box>
           </HStack>
+          <Flex alignItems="center">
+            <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
+              {links.map((link) => (
+                <NavLink key={link.href} link={link} />
+              ))}
+            </HStack>
+          </Flex>
         </Flex>
-      </Flex>
 
-      {isOpen ? (
-        <Box pb={4} display={{ md: 'none' }}>
-          <Stack as="nav" spacing={4}>
-            {links.map((link) => (
-              <NavLink key={link.href} link={link} />
-            ))}
-          </Stack>
-        </Box>
-      ) : null}
-    </Box>
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as="nav" spacing={4}>
+              {links.map((link) => (
+                <NavLink key={link.href} link={link} />
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+      <Box paddingTop={4} />
+      {children}
+    </>
   );
 };
