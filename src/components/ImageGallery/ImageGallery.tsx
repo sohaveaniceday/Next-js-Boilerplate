@@ -46,6 +46,8 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
           alt={images[currentPhotoIndex].displayName}
           width="4032"
           height="2268"
+          loading="eager"
+          key={images[currentPhotoIndex].displayName}
         />
         <HStack justifyContent="space-between" position="absolute" width="100%">
           <Box
