@@ -15,6 +15,7 @@ const images = [
   { filePath: 'bedroom-3.png', displayName: 'Bedroom 3' },
   { filePath: 'kitchen.png', displayName: 'Kitchen' },
   { filePath: 'bathroom.png', displayName: 'Bathroom' },
+  { filePath: 'outside-pond.png', displayName: 'The Pond' },
   { filePath: 'dining-area.png', displayName: 'Dining Area' },
   { filePath: 'outside-sideg.png', displayName: 'Parking' },
   { filePath: 'sitting-area.png', displayName: 'Sitting Area' },
