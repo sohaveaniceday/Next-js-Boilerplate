@@ -7,9 +7,17 @@ import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 
 const images = [
-  { filePath: 'image-1.png', displayName: 'Living Room' },
-  { filePath: 'image-2.png', displayName: 'Kitchen' },
-  { filePath: 'image-3.png', displayName: 'Bedroom 2' },
+  { filePath: 'living-room.png', displayName: 'Living Room' },
+  { filePath: 'outside-main.png', displayName: 'Outside' },
+  { filePath: 'outside-view.png', displayName: 'The View' },
+  { filePath: 'bedroom-1.png', displayName: 'Bedroom 1' },
+  { filePath: 'bedroom-2.png', displayName: 'Bedroom 2' },
+  { filePath: 'bedroom-3.png', displayName: 'Bedroom 3' },
+  { filePath: 'kitchen.png', displayName: 'Kitchen' },
+  { filePath: 'bathroom.png', displayName: 'Bathroom' },
+  { filePath: 'dining-area.png', displayName: 'Dining Area' },
+  { filePath: 'outside-sideg.png', displayName: 'Parking' },
+  { filePath: 'sitting-area.png', displayName: 'Sitting Area' },
 ];
 
 const Gallery = () => (
